@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+    <div class="container">
+        <div class="navbar">
+            <img src="logo.png" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+            <img src="menu.png" class="menu-icon">
+        </div>
+    </div>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="text-box">
+                    <h5>Our latest Collections</h5>
+                    <h1><b>Toys are great</b><br> inspiration<b> to our children</b></h1>
+                </div>
+                
+            
+            </div>
+            <div class="col">
+                <div class="gallery-box">
+                    <img src="pic4.png" id="gallery">
+                    <ul>
+                        <li class="btn">01</li>
+                        <li class="btn">02</li>
+                        <li class="btn">03</li>
+                        <li class="btn active">04</li>
+                        <li class="btn">05</li>
+                        <li class="btn">06</li>
+                    
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+      
+    </div>
+<script>
+    var btn=document.getElementsByClassName("btn");
+    var gallery=document.getElementById("gallery");
+    var images=new Array(
+        "pic1.png",
+        "pic2.png",
+        "pic3.png",
+        "pic4.png",
+        "pic5.png",
+        "pic6.png"
+    );
+        for(let i=0;i<btn.length;i++) {
+            btn[i].onclick = function()
+            {
+                gallery.src = images[i];
+                let current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace("active","");
+                this.className = "active";   
+            };
+        }
+</script>
+</div>
+    <div class="testimonials">
+        <h1>Testimonials</h1>
+        <div class="content">
+            <div class="card">
+                <div class="box">
+                    <div class="image">
+                        <img src="pic7.png" alt="">
+                    </div>
+                    <h3>Farin</h3>
+                    <p><span="fa.fa-quote-left.left"></span>Great store to shop in New Zealand.<br> There are wide range of colorful and<br> different collecton of toys available for kids<br> at all age group. The customer service<br> is really excellent here and staffs are very<br> friendly too.<span class="fa.fa-quote-right.right"></span></p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box">
+                    <div class="image">
+                        <img src="pic9.png" alt="">
+                    </div>
+                    <h3>Ron</h3>
+                    <p><span class="fa.fa-quote-left.left"></span>This place is very cool! I highly<br> recommend going here. The prices are<br> affordadable and the staffs there are very<br> friendly.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box">
+                    <div class="image">
+                        <img src="pic8.png" alt="">
+                    </div>
+                    <h3>Raju</h3>
+                    <p><span class="fa.fa-quote-left.left"></span>Wonderful place for gift shopping! Lot of<br> toys, games and more found here for<br> young people. All products are high quality<br> branded one and safe for your<br> loved ones. Car parking lots are available<br> all the time.<span="fa.fa-quote-right.right"></span</p>
+                </div>
+            </div> 
+        </div>
+    </div>
+    <div class="footer-container">
+        <div class="footer">
+            <div class="footer-heading footer-1">
+                <img src="logo.png" class="logo">
+            </div>
+            <div class="footer-heading footer-2">
+                <h2>Important links</h2>
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Sign In</a>
+            </div>
+            <div class="footer-heading footer-3">
+                <h2>Social Media</h2>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+                <a href="#">Whatsapp</a>
+            </div>
+            <div class="footer-email-form">
+                <h2>Join Our Newsletter</h2>
+                <input type="email" placeholder="Enter your email address" id="footer-email">
+                <input type="submit" value="Sign Up" id="footer-email-btn">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
